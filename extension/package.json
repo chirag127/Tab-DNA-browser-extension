@@ -1,0 +1,35 @@
+{
+  "name": "tab-dna",
+  "version": "1.0.0",
+  "description": "Visualize your browsing journey with a branch-like graph of your tab history",
+  "main": "index.js",
+  "scripts": {
+    "build": "node scripts/generate-icons.js && webpack --mode production",
+    "dev": "node scripts/generate-icons.js && webpack --mode development --watch",
+    "generate-icons": "node scripts/generate-icons.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chirag Singhal",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.22.5",
+    "@babel/preset-env": "^7.22.5",
+    "autoprefixer": "^10.4.14",
+    "babel-loader": "^9.1.2",
+    "canvas": "^2.11.2",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.8.1",
+    "html-webpack-plugin": "^5.5.3",
+    "postcss": "^8.4.24",
+    "postcss-loader": "^7.3.3",
+    "style-loader": "^3.3.3",
+    "tailwindcss": "^3.3.2",
+    "webpack": "^5.88.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "cytoscape": "^3.25.0",
+    "d3": "^7.8.5",
+    "file-saver": "^2.0.5"
+  }
+}

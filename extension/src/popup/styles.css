@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+.node {
+  cursor: pointer;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 2px;
+}
+
+.tooltip {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.graph-container {
+  width: 100%;
+  height: 500px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.controls {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.btn {
+  @apply px-4 py-2 rounded-md text-white font-medium transition-colors;
+}
+
+.btn-primary {
+  @apply bg-primary hover:bg-primary-dark;
+}
+
+.btn-secondary {
+  @apply bg-secondary hover:bg-secondary-dark text-gray-800;
+}
+
+.tab-node {
+  fill: #0078ff;
+  stroke: #0057b8;
+  stroke-width: 2px;
+}
+
+.tab-node:hover {
+  fill: #4da6ff;
+}
+
+.session-timeline {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f8fafc;
+  border-radius: 8px;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.timeline-item:last-child {
+  border-bottom: none;
+}
+
+.favicon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+.time-spent {
+  margin-left: auto;
+  font-size: 12px;
+  color: #64748b;
+}

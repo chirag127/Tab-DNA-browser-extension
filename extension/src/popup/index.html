@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tab DNA</title>
+</head>
+<body class="bg-gray-50 text-gray-900 p-4 w-[600px] h-[600px] overflow-auto">
+  <header class="mb-4">
+    <div class="flex items-center justify-between">
+      <h1 class="text-2xl font-bold text-primary">Tab DNA</h1>
+      <div class="flex space-x-2">
+        <button id="exportBtn" class="btn btn-secondary text-sm">
+          Export
+        </button>
+        <button id="settingsBtn" class="btn btn-primary text-sm">
+          Settings
+        </button>
+      </div>
+    </div>
+    <p class="text-gray-600 text-sm">Visualize your browsing journey</p>
+  </header>
+
+  <div class="tabs mb-4">
+    <div class="flex border-b border-gray-200">
+      <button id="currentTabBtn" class="px-4 py-2 border-b-2 border-primary font-medium text-primary">
+        Current Tab
+      </button>
+      <button id="allTabsBtn" class="px-4 py-2 border-b-2 border-transparent font-medium text-gray-500 hover:text-gray-700">
+        All Tabs
+      </button>
+      <button id="sessionsBtn" class="px-4 py-2 border-b-2 border-transparent font-medium text-gray-500 hover:text-gray-700">
+        Sessions
+      </button>
+    </div>
+  </div>
+
+  <div id="currentTabView" class="tab-content">
+    <div class="current-tab-info mb-4 p-4 bg-white rounded-lg shadow-sm">
+      <div class="flex items-center">
+        <img id="currentFavicon" src="" alt="" class="w-6 h-6 mr-2">
+        <h2 id="currentTitle" class="text-lg font-semibold truncate"></h2>
+      </div>
+      <p id="currentUrl" class="text-sm text-gray-500 truncate mt-1"></p>
+    </div>
+
+    <div class="graph-container bg-white p-4 rounded-lg shadow-sm">
+      <div id="tabGraph" class="w-full h-[400px]"></div>
+    </div>
+
+    <div class="controls mt-4 flex justify-between">
+      <div>
+        <button id="expandAllBtn" class="btn btn-secondary text-sm">
+          Expand All
+        </button>
+        <button id="collapseAllBtn" class="btn btn-secondary text-sm ml-2">
+          Collapse All
+        </button>
+      </div>
+      <div>
+        <button id="exportPngBtn" class="btn btn-primary text-sm">
+          Export as PNG
+        </button>
+        <button id="exportJsonBtn" class="btn btn-primary text-sm ml-2">
+          Export as JSON
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="allTabsView" class="tab-content hidden">
+    <div class="graph-container bg-white p-4 rounded-lg shadow-sm">
+      <div id="allTabsGraph" class="w-full h-[450px]"></div>
+    </div>
+  </div>
+
+  <div id="sessionsView" class="tab-content hidden">
+    <div class="sessions-list">
+      <h2 class="text-lg font-semibold mb-2">Browsing Sessions</h2>
+      <div id="sessionsList" class="space-y-2">
+        <!-- Sessions will be populated here -->
+      </div>
+    </div>
+
+    <div id="sessionTimeline" class="session-timeline mt-4 hidden">
+      <h3 class="text-md font-semibold mb-2">Session Timeline</h3>
+      <div id="timelineItems" class="space-y-1">
+        <!-- Timeline items will be populated here -->
+      </div>
+    </div>
+  </div>
+
+  <div id="tooltip" class="tooltip hidden"></div>
+</body>
+</html>
