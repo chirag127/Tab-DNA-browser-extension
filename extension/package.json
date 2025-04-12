@@ -4,9 +4,8 @@
   "description": "Visualize your browsing journey with a branch-like graph of your tab history",
   "main": "index.js",
   "scripts": {
-    "build": "node scripts/generate-icons.js && webpack --mode production",
-    "dev": "node scripts/generate-icons.js && webpack --mode development --watch",
-    "generate-icons": "node scripts/generate-icons.js",
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Chirag Singhal",
@@ -16,7 +15,6 @@
     "@babel/preset-env": "^7.22.5",
     "autoprefixer": "^10.4.14",
     "babel-loader": "^9.1.2",
-    "canvas": "^2.11.2",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.8.1",
     "html-webpack-plugin": "^5.5.3",
@@ -28,6 +26,7 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
+    "canvas": "^3.1.0",
     "cytoscape": "^3.25.0",
     "d3": "^7.8.5",
     "file-saver": "^2.0.5"
